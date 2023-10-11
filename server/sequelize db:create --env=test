@@ -1,0 +1,17 @@
+                                        Table "public.Bobas"
+   Column    |           Type           | Collation | Nullable |               Default               
+-------------+--------------------------+-----------+----------+-------------------------------------
+ id          | integer                  |           | not null | nextval('"Bobas_id_seq"'::regclass)
+ Restaurants | character varying(255)   |           |          | 
+ Address     | character varying(255)   |           |          | 
+ Number      | character varying(255)   |           |          | 
+ Rating      | integer                  |           |          | 
+ Hours       | character varying(255)   |           |          | 
+ Image       | character varying(255)   |           |          | 
+ Feedback    | text                     |           |          | 
+ City        | character varying(255)   |           |          | 
+ createdAt   | timestamp with time zone |           | not null | 
+ updatedAt   | timestamp with time zone |           | not null | 
+Indexes:
+    "Bobas_pkey" PRIMARY KEY, btree (id)
+
