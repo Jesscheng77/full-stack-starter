@@ -27,5 +27,7 @@ export default function (sequelize, DataTypes) {
       modelName: 'Boba',
     }
   );
+
+  
   return Boba;
 }

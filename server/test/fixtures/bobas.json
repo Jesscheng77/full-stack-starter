@@ -1,0 +1,45 @@
+[
+    {
+        "model": "Boba",
+        "data":{
+            "id": 10000,
+    "Restaurants": "Purple Kow 10001",
+      "Address": "3620 Balboa St, San Francisco, CA 94121 10001",
+      "Number": "(415) 387-9009 10001",
+      "Rating": 5,
+      "Hours": "Mon-Fri 10001",
+      "Image": "pic 10001",
+      "Feedback": "hi 10001",
+      "City": "San Francisco 10001"
+        }
+        
+    },
+    {
+        "model": "Boba",
+        "data":{
+            "id": 10001,
+        "Restaurants": "Purple Kow 10002",
+      "Address": "3620 Balboa St, San Francisco, CA 94121 10002",
+      "Number": "(415) 387-9009 10002",
+      "Rating": 5,
+      "Hours": "Mon-Fri 10002",
+      "Image": "pic 10002",
+      "Feedback": "hi 10002",
+      "City": "San Francisco 10002"
+        }
+    },
+    {
+        "model": "Boba",
+        "data":{
+            "id": 10002,
+        "Restaurants": "Purple Kow 10003",
+        "Address": "3620 Balboa St, San Francisco, CA 94121 10003",
+        "Number": "(415) 387-9009 10003",
+        "Rating": 5,
+        "Hours": "Mon-Fri 10003",
+        "Image": "pic 10003",
+        "Feedback": "hi 10003",
+        "City": "San Francisco 10003"
+        }
+    }
+]
