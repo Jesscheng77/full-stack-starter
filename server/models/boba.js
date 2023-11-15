@@ -21,6 +21,12 @@ export default function (sequelize, DataTypes) {
       Image: DataTypes.STRING,
       Feedback: DataTypes.TEXT,
       City: DataTypes.STRING,
+      ImageUrl: {
+        type: DataTypes.VIRTUAL,
+        get() {
+          return this.assetUrl('Image');
+        }
+      }
     },
     {
       sequelize,
@@ -28,6 +34,9 @@ export default function (sequelize, DataTypes) {
     }
   );
 
+  Boba.afterSave(async (record, options) => {
+    record.handleAssetFile('Image', options);
+  });
   
   return Boba;
 }

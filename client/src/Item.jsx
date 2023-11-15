@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom'
 
 
-function Item({ id, fields }) {
+function Item({ id, name, image }) {
     return (<div className="col-xl-4 d-flex justify-content-center">
         <div className="card cardImageText">
-            <img src={fields.images[0].url}/>
+            <img src={image}/>
             <div className="card-body">
-             <Link to={`/detail/${id}`}><h2 className="card-title card-key">{fields.Name}</h2></Link>
+             <Link to={`/detail/${id}`}><h2 className="card-title card-key">{name}</h2></Link>
             </div>
         </div>
     </div >
