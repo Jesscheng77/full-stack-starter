@@ -12,6 +12,7 @@ import AdminRoutes from './Admin/AdminRoutes';
 import InvitesRoutes from './Invites/InvitesRoutes';
 import PasswordsRoutes from './Passwords/PasswordsRoutes';
 import Register from './Register';
+import BobaForm from './BobaForm';
 import UsersRoutes from './Users/UsersRoutes';
 
 import Detail from './Detail';
@@ -29,6 +30,8 @@ function App() {
             <AppRedirects>
               <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/bobas/new" element={<BobaForm />} />
+                <Route path="/bobas/:id" element={<BobaForm />} />
                 <Route path="/detail/:id" element={<Detail />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/passwords/*" element={<PasswordsRoutes />} />

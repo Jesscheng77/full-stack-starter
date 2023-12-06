@@ -8,7 +8,6 @@
       "Number": "(415) 387-9009 10001",
       "Rating": 5,
       "Hours": "Mon-Fri 10001",
-      "Image": "pic 10001",
       "Feedback": "hi 10001",
       "City": "San Francisco 10001"
         }
@@ -23,7 +22,6 @@
       "Number": "(415) 387-9009 10002",
       "Rating": 5,
       "Hours": "Mon-Fri 10002",
-      "Image": "pic 10002",
       "Feedback": "hi 10002",
       "City": "San Francisco 10002"
         }
@@ -37,7 +35,6 @@
         "Number": "(415) 387-9009 10003",
         "Rating": 5,
         "Hours": "Mon-Fri 10003",
-        "Image": "pic 10003",
         "Feedback": "hi 10003",
         "City": "San Francisco 10003"
         }

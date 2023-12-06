@@ -5,6 +5,7 @@ import session from 'supertest-session';
 
 import helper from '../../helper.js';
 import app from '../../../app.js';
+import models from '../../../models/index.js';
 
 describe('/api/bobas', () => {
   let testSession;
@@ -12,6 +13,36 @@ describe('/api/bobas', () => {
   beforeEach(async () => {
     await helper.loadFixtures(['bobas']);
     testSession = session(app);
+  });
+
+  it('creates a new Item', async () => {
+    const response = await testSession.post('/api/bobas')
+    .send({ Restaurants: 'Create Name', Address: 'Create Text' })
+    .expect(StatusCodes.CREATED);
+
+  const record = await models.Boba.findByPk(response.body.id);
+  assert.deepStrictEqual(record.Restaurants, 'Create Name');
+  assert.deepStrictEqual(record.Address, 'Create Text');
+  });
+
+  it('updates an existing Boba', async () => {
+    await testSession.patch(`/api/bobas/10001`)
+    .send({
+      Restaurants: 'Updated Name',
+      Address: 'Updated Text'
+    })
+    .expect(StatusCodes.OK);
+    const record = await models.Boba.findByPk(10001);
+    assert.deepStrictEqual(record.Restaurants, 'Updated Name');
+    assert.deepStrictEqual(record.Address, 'Updated Text');
+  });
+
+  it('deletes an existing Boba', async () => {
+    await testSession.delete('/api/bobas/10001')
+    .expect(StatusCodes.OK);
+
+    const record = await models.Boba.findByPk(10001);
+    assert.deepStrictEqual(record, null);
   });
 
   it('fetch all bobas from the Bobas table', async () => {
